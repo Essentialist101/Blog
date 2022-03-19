@@ -1,13 +1,19 @@
 ---
-title: "Git Learning"
-author: "HCZ"
-output: html_document
+title: Git Learning
+author: HCZ
+date: '2022-03-19'
+slug: []
+categories:
+  - Git
+tags: []
+description: ~
+featured_image: ~
 ---
 
 
 
-<div id="git工作流程" class="section level2">
-<h2>Git工作流程</h2>
+<div id="git工作流程" class="section level1">
+<h1>Git工作流程</h1>
 <p>1.克隆 Git 资源作为工作目录。</p>
 <p>2.在克隆的资源上添加或修改文件。</p>
 <p>3.如果其他人修改了，你可以更新资源。</p>
@@ -16,8 +22,8 @@ output: html_document
 <p>6.在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。</p>
 <p><img src="git-process.png" /></p>
 </div>
-<div id="git基本概念" class="section level2">
-<h2>Git基本概念</h2>
+<div id="git基本概念" class="section level1">
+<h1>Git基本概念</h1>
 <p>1.工作区：就是你在电脑里能看到的目录。</p>
 <p>2.暂存区：英文叫stage或index。一般存放在“.git”目录下的“index”文件中，所以我们把暂存区有时也叫作索引(index)。</p>
 <p>3.版本库：工作区有一个隐藏目录“.git”，这个不算工作区，而是Git的版本库。</p>
@@ -29,15 +35,15 @@ output: html_document
 (4)<strong>git rm –cached <file></strong>:当执行 git rm –cached <file> 命令时，会直接从暂存区删除文件，工作区则不做出改变。
 (5)<strong>git checkout</strong>:当执行 git checkout . 或者 git checkout – <file> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。</p>
 </div>
-<div id="git创建仓库" class="section level2">
-<h2>Git创建仓库</h2>
+<div id="git创建仓库" class="section level1">
+<h1>Git创建仓库</h1>
 <p>(1)<strong>git init</strong>:使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。在执行完成 git init 命令后，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变。</p>
 <p>(2)<strong>git clone</strong>:使用 git clone 从现有 Git 仓库中拷贝项目。</p>
-<pre><code>git clone &lt;&quot;repository name&quot;&gt;</code></pre>
+<pre class="r"><code>git clone &lt;&quot;repository name&quot;&gt;</code></pre>
 <p>(3)<strong>git config</strong>:git 的设置使用 git config 命令。</p>
 </div>
-<div id="git基本操作" class="section level2">
-<h2>Git基本操作</h2>
+<div id="git基本操作" class="section level1">
+<h1>Git基本操作</h1>
 <p><img src="git-command.jpg" />
 常用指令：git clone, git push, git add, git commit, git checkout, git pull.</p>
 <p><strong>提交与修改操作</strong>
@@ -56,38 +62,38 @@ output: html_document
 (3)git pull: 下载远程代码并合并。
 (4)git push: 上传远程代码并合并。</p>
 </div>
-<div id="我的常用操作" class="section level2">
-<h2>我的常用操作</h2>
-<div id="git-remote-add-origin-httpsgithub.com" class="section level3">
-<h3>git remote add origin <a href="https://github.com/" class="uri">https://github.com/</a><github帐号>/<仓库名称></h3>
+<div id="我的常用操作" class="section level1">
+<h1>我的常用操作</h1>
+<div id="git-remote-add-origin-httpsgithub.com" class="section level2">
+<h2>git remote add origin <a href="https://github.com/" class="uri">https://github.com/</a><github帐号>/<仓库名称></h2>
 <p>添加远程仓库origin。</p>
 </div>
-<div id="git-add-." class="section level3">
-<h3>git add .</h3>
+<div id="git-add-." class="section level2">
+<h2>git add .</h2>
 <p>将工作区所有文件添加到版本库。</p>
 </div>
-<div id="git-commit--m-remark" class="section level3">
-<h3>git commit -m “remark”</h3>
+<div id="git-commit--m-remark" class="section level2">
+<h2>git commit -m “remark”</h2>
 <p>提交暂存区到本地仓库。</p>
 </div>
-<div id="git-remote--v" class="section level3">
-<h3>git remote -v</h3>
+<div id="git-remote--v" class="section level2">
+<h2>git remote -v</h2>
 <p>显示所有远程仓库及其链接。</p>
 </div>
-<div id="git-push-origin-master" class="section level3">
-<h3>git push origin master</h3>
+<div id="git-push-origin-master" class="section level2">
+<h2>git push origin master</h2>
 <p>将文件推送到远程仓库origin的master分支。</p>
 </div>
-<div id="git-push--u-origin-master" class="section level3">
-<h3>git push -u origin master</h3>
+<div id="git-push--u-origin-master" class="section level2">
+<h2>git push -u origin master</h2>
 <p>加了参数-u后，以后即可直接用git push 代替git push origin master。</p>
 </div>
-<div id="git-push-origin-delete-master" class="section level3">
-<h3>git push origin –delete master</h3>
+<div id="git-push-origin-delete-master" class="section level2">
+<h2>git push origin –delete master</h2>
 <p>删除远程仓库origin的master分支。</p>
 </div>
-<div id="git-pull-origin-master-allow-unrelated-histories" class="section level3">
-<h3>git pull origin master –allow-unrelated-histories</h3>
+<div id="git-pull-origin-master-allow-unrelated-histories" class="section level2">
+<h2>git pull origin master –allow-unrelated-histories</h2>
 <p>将远程仓库的master分支与当前工作区分支合并。</p>
 </div>
 </div>

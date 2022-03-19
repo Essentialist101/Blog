@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on HCZ-Blog</title>
+    <link>https://hcz.netlify.app/categories/git/</link>
+    <description>Recent content in Git on HCZ-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.netlify.app/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Learning</title>
+      <link>https://hcz.netlify.app/post/2022-03-19-git-learning/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hcz.netlify.app/post/2022-03-19-git-learning/</guid>
+      <description>Git工作流程1.克隆 Git 资源作为工作目录。
+2.在克隆的资源上添加或修改文件。
+3.如果其他人修改了，你可以更新资源。
+4.在提交前查看修改。
+5.提交修改。
+6.在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。
+Git基本概念1.工作区：就是你在电脑里能看到的目录。
+2.暂存区：英文叫stage或index。一般存放在“.git”目录下的“index”文件中，所以我们把暂存区有时也叫作索引(index)。
+3.版本库：工作区有一个隐藏目录“.git”，这个不算工作区，而是Git的版本库。
+图中的指令：(1)git add:当对工作区修改（或新增）的文件执行“git add”命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。(2)git commit:当执行提交操作“git commit”时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。(3)git reset HEAD:当执行 git reset HEAD 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。(4)git rm –cached :当执行 git rm –cached  命令时，会直接从暂存区删除文件，工作区则不做出改变。(5)git checkout:当执行 git checkout . 或者 git checkout –  命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。
+Git创建仓库(1)git init:使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。在执行完成 git init 命令后，Git 仓库会生成一个 .</description>
+    </item>
+    
+  </channel>
+</rss>

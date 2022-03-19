@@ -1,14 +1,21 @@
 ---
-title: "Git Learning"
-author: "HCZ"
-output: html_document
+title: Git Learning
+author: HCZ
+date: '2022-03-19'
+slug: []
+categories:
+  - Git
+tags: []
+description: ~
+featured_image: ~
 ---
 
-## Git工作流程
+
+# Git工作流程
 
 1.克隆 Git 资源作为工作目录。
 
-2.在克隆的资源上添加或修改文件。
+2.在克隆的资源上添加或修改文件。 
 
 3.如果其他人修改了，你可以更新资源。
 
@@ -20,7 +27,7 @@ output: html_document
 
 ![](git-process.png)
 
-## Git基本概念
+# Git基本概念
 
 1.工作区：就是你在电脑里能看到的目录。
 
@@ -37,18 +44,19 @@ output: html_document
 (4)**git rm --cached <file>**:当执行 git rm --cached <file> 命令时，会直接从暂存区删除文件，工作区则不做出改变。
 (5)**git checkout**:当执行 git checkout . 或者 git checkout -- <file> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。
 
-## Git创建仓库
+# Git创建仓库
 
 (1)**git init**:使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。在执行完成 git init 命令后，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变。
 
 (2)**git clone**:使用 git clone 从现有 Git 仓库中拷贝项目。
-```{}
+
+```{r eval=FALSE, include=TRUE}
 git clone <"repository name">
 ```
 
 (3)**git config**:git 的设置使用 git config 命令。
 
-## Git基本操作
+# Git基本操作
 
 ![](git-command.jpg)
 常用指令：git clone, git push, git add, git commit, git checkout, git pull.
@@ -70,31 +78,40 @@ git clone <"repository name">
 (3)git pull: 下载远程代码并合并。
 (4)git push: 上传远程代码并合并。
 
-## 我的常用操作
+# 我的常用操作
 
-### git remote add origin https://github.com/<github帐号>/<仓库名称>
+## git remote add origin https://github.com/<github帐号>/<仓库名称>
+
 添加远程仓库origin。
 
-### git add .
+## git add .
+
 将工作区所有文件添加到版本库。
 
-### git commit -m "remark"
+## git commit -m "remark"
+
 提交暂存区到本地仓库。
 
-### git remote -v
+## git remote -v
+
 显示所有远程仓库及其链接。
 
-### git push origin master
+## git push origin master
+
 将文件推送到远程仓库origin的master分支。
 
-### git push -u origin master
+## git push -u origin master
+
 加了参数-u后，以后即可直接用git push 代替git push origin master。
 
-### git push origin --delete master
+## git push origin --delete master
+
 删除远程仓库origin的master分支。
 
-### git pull origin master --allow-unrelated-histories
+## git pull origin master --allow-unrelated-histories
+
 将远程仓库的master分支与当前工作区分支合并。
+
 
 
 

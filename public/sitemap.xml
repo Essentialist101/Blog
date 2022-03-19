@@ -2,37 +2,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://hcz.netlify.app/2014/creating-a-new-theme/</loc>
-      
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/2014/migrate-from-jekyll/</loc>
-      
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://hcz.netlify.app/categories/</loc>
       
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://hcz.netlify.app/categories/git/</loc>
+      
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://hcz.netlify.app/post/2022-03-19-git-learning/</loc>
+      
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -46,7 +46,7 @@
     <url>
       <loc>https://hcz.netlify.app/</loc>
       
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -58,93 +58,9 @@
     </url>
   
     <url>
-      <loc>https://hcz.netlify.app/2020/2020-12-01-r-rmarkdown/</loc>
+      <loc>https://hcz.netlify.app/post/</loc>
       
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/plot/</loc>
-      
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/posts/</loc>
-      
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/categories/r/</loc>
-      
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/r-markdown/</loc>
-      
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/regression/</loc>
-      
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/</loc>
-      
-      <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -159,174 +75,6 @@
       <loc>https://hcz.netlify.app/about/</loc>
       
       <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/2014/goisforlovers/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/categories/development/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/development/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/2014/hugoisforlovers/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/categories/go/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/go/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/golang/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/categories/golang/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/hugo/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/2014/goisforlovers.fr/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/templates/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hcz.netlify.app/tags/themes/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -380,7 +128,7 @@
     </url>
   
     <url>
-      <loc>https://hcz.netlify.app/1/git_learning/</loc>
+      <loc>https://hcz.netlify.app/tags/</loc>
       
       
       <changefreq>monthly</changefreq>

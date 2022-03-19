@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://hcz.netlify.app/post/2022-03-19-git-learning/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Git Learning | HCZ-Blog
+       
+  </title>
+  <meta name="title" content="Git Learning | HCZ-Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git Learning"/>
+<meta name="twitter:description" content="Git工作流程1.克隆 Git 资源作为工作目录。
+2.在克隆的资源上添加或修改文件。
+3.如果其他人修改了，你可以更新资源。
+4.在提交前查看修改。
+5.提交修改。
+6.在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。
+Git基本概念1.工作区：就是你在电脑里能看到的目录。
+2.暂存区：英文叫stage或index。一般存放在“.git”目录下的“index”文件中，所以我们把暂存区有时也叫作索引(index)。
+3.版本库：工作区有一个隐藏目录“.git”，这个不算工作区，而是Git的版本库。
+图中的指令：(1)git add:当对工作区修改（或新增）的文件执行“git add”命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。(2)git commit:当执行提交操作“git commit”时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。(3)git reset HEAD:当执行 git reset HEAD 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。(4)git rm –cached :当执行 git rm –cached  命令时，会直接从暂存区删除文件，工作区则不做出改变。(5)git checkout:当执行 git checkout . 或者 git checkout –  命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。
+Git创建仓库(1)git init:使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。在执行完成 git init 命令后，Git 仓库会生成一个 ."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Git Learning",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/hcz.netlify.app\/post\/2022-03-19-git-learning\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/hcz.netlify.app\/head.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "post",
+  
+  "wordcount":  192 ,
+  "url": "https:\/\/hcz.netlify.app\/post\/2022-03-19-git-learning\/",
+  "datePublished": "2022-03-19T00:00:00\u002b00:00",
+  "dateModified": "2022-03-19T00:00:00\u002b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/hcz.netlify.app\/head.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "HCZ"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://hcz.netlify.app">HCZ-Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://hcz.netlify.app">HCZ-Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Git Learning</h1>
+        <div class="post-meta">
+            Written by <a href="https://hcz.netlify.app" rel="author">HCZ</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2022-03-19 >19 March 2022</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hcz.netlify.app/categories/git/"> Git </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                1 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+
+<div id="git工作流程" class="section level1">
+<h1>Git工作流程</h1>
+<p>1.克隆 Git 资源作为工作目录。</p>
+<p>2.在克隆的资源上添加或修改文件。</p>
+<p>3.如果其他人修改了，你可以更新资源。</p>
+<p>4.在提交前查看修改。</p>
+<p>5.提交修改。</p>
+<p>6.在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。</p>
+<p><img src="git-process.png" /></p>
+</div>
+<div id="git基本概念" class="section level1">
+<h1>Git基本概念</h1>
+<p>1.工作区：就是你在电脑里能看到的目录。</p>
+<p>2.暂存区：英文叫stage或index。一般存放在“.git”目录下的“index”文件中，所以我们把暂存区有时也叫作索引(index)。</p>
+<p>3.版本库：工作区有一个隐藏目录“.git”，这个不算工作区，而是Git的版本库。</p>
+<p><img src="concept.jpg" /></p>
+<p>图中的指令：
+(1)<strong>git add</strong>:当对工作区修改（或新增）的文件执行“git add”命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
+(2)<strong>git commit</strong>:当执行提交操作“git commit”时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
+(3)<strong>git reset HEAD</strong>:当执行 git reset HEAD 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
+(4)<strong>git rm –cached <file></strong>:当执行 git rm –cached <file> 命令时，会直接从暂存区删除文件，工作区则不做出改变。
+(5)<strong>git checkout</strong>:当执行 git checkout . 或者 git checkout – <file> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。</p>
+</div>
+<div id="git创建仓库" class="section level1">
+<h1>Git创建仓库</h1>
+<p>(1)<strong>git init</strong>:使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。在执行完成 git init 命令后，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变。</p>
+<p>(2)<strong>git clone</strong>:使用 git clone 从现有 Git 仓库中拷贝项目。</p>
+<pre class="r"><code>git clone &lt;&quot;repository name&quot;&gt;</code></pre>
+<p>(3)<strong>git config</strong>:git 的设置使用 git config 命令。</p>
+</div>
+<div id="git基本操作" class="section level1">
+<h1>Git基本操作</h1>
+<p><img src="git-command.jpg" />
+常用指令：git clone, git push, git add, git commit, git checkout, git pull.</p>
+<p><strong>提交与修改操作</strong>
+(1)git add: 添加文件到仓库或版本库。
+(2)git status: 查看仓库当前状态，显示有变更的文件。
+(3)git diff: 比较文件的不同，即暂存区和工作区的差异。
+(4)git commit: 提交暂存区到本地仓库。
+(5)git reset: 回退版本。
+(6)git rm: 删除工作区文件。
+(7)git mv: 移动或重命名工作区文件。
+(8)git log: 查看历史提交记录。
+(9)git blame <file>: 以列表形式查看制定文件的历史修改记录。</p>
+<p><strong>远程操作</strong>
+(1)git remote: 远程仓库操作。
+(2)git fetch: 从远程获取代码库。
+(3)git pull: 下载远程代码并合并。
+(4)git push: 上传远程代码并合并。</p>
+</div>
+<div id="我的常用操作" class="section level1">
+<h1>我的常用操作</h1>
+<div id="git-remote-add-origin-httpsgithub.com" class="section level2">
+<h2>git remote add origin <a href="https://github.com/" class="uri">https://github.com/</a><github帐号>/<仓库名称></h2>
+<p>添加远程仓库origin。</p>
+</div>
+<div id="git-add-." class="section level2">
+<h2>git add .</h2>
+<p>将工作区所有文件添加到版本库。</p>
+</div>
+<div id="git-commit--m-remark" class="section level2">
+<h2>git commit -m “remark”</h2>
+<p>提交暂存区到本地仓库。</p>
+</div>
+<div id="git-remote--v" class="section level2">
+<h2>git remote -v</h2>
+<p>显示所有远程仓库及其链接。</p>
+</div>
+<div id="git-push-origin-master" class="section level2">
+<h2>git push origin master</h2>
+<p>将文件推送到远程仓库origin的master分支。</p>
+</div>
+<div id="git-push--u-origin-master" class="section level2">
+<h2>git push -u origin master</h2>
+<p>加了参数-u后，以后即可直接用git push 代替git push origin master。</p>
+</div>
+<div id="git-push-origin-delete-master" class="section level2">
+<h2>git push origin –delete master</h2>
+<p>删除远程仓库origin的master分支。</p>
+</div>
+<div id="git-pull-origin-master-allow-unrelated-histories" class="section level2">
+<h2>git pull origin master –allow-unrelated-histories</h2>
+<p>将远程仓库的master分支与当前工作区分支合并。</p>
+</div>
+</div>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>HCZ </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>192</span>
+            </p>
+
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-git-learning%2f&amp;text=Git%20Learning&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-git-learning%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-git-learning%2f&amp;title=Git%20Learning" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://hcz.netlify.app">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'yourdiscussshortname';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2021 - 2022</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hcz.netlify.app">HCZ</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.10.0/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

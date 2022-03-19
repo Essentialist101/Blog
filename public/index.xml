@@ -5,15 +5,15 @@
     <description>Recent content in HCZ-Blog on HCZ-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hcz.netlify.app/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
-      <link>https://hcz.netlify.app/posts/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <link>https://hcz.netlify.app/post/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://hcz.netlify.app/posts/</guid>
+      <guid>https://hcz.netlify.app/post/</guid>
       <description></description>
     </item>
     
