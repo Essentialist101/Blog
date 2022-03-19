@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on HCZ-Blog</title>
+    <link>https://hcz.netlify.app/categories/python/</link>
+    <description>Recent content in Python on HCZ-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.netlify.app/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Learning</title>
+      <link>https://hcz.netlify.app/post/2022-03-19-python-learning/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hcz.netlify.app/post/2022-03-19-python-learning/</guid>
+      <description>一、初识python1.1 python的开发环境python是一门语言，常用IDE（集成开发环境）有pycharm和spyder，网页交互式编译器jupyter。还有一个是anaconda，属于python系列软件的打包软件。
+1.2 python的特征python 最具特色的就是用缩进来写模块。缩进的空白数量是可变的，但是所有代码块语句必须包含相同的缩进空白数量，这个必须严格执行。比如：
+if True:print (&amp;quot;Answer&amp;quot;)print (&amp;quot;True&amp;quot;)else:print (&amp;quot;Answer&amp;quot;)# 没有严格缩进，在执行时会报错print (&amp;quot;False&amp;quot;)Python的小优点（print函数）互换两个数的值可以用以下优雅的代码实现：
+x=3y=5x,y=y,x#print输出一个路径可以使用原始字符串或者转义字符print(&amp;quot;D:\\mydata\\notebook.txt&amp;quot;)print(r&amp;quot;D:\mydata\notebook.txt&amp;quot;)#长字符串（也可以用3个单引号，但要前后对应）poetry = &amp;quot;&amp;quot;&amp;quot;面朝大海春暖花开这是一首优美的诗歌&amp;quot;&amp;quot;&amp;quot;print(poetry)转义字符
+1.3 python变量类型标准数据类型有：Numbers——数字（整型int与长整型long、浮点型float、复数complex）、String——字符串、List——列表、Tuple——元组、Dictionary——字典
+python特有的结构主要是三种：列表、元组与字典。
+1.3.1 list列表列表是最常见的一种数据形式，可以把大量地数据放到一起。它是以方括号“[ ]”包围的数据集合，不同成员之间用半角逗号相隔开。列表可以包含任何数据类型，也可以包含一个列表。列表也可以通过序号访问其中的成员。
+alist = [&amp;#39;a&amp;#39;,&amp;#39;1&amp;#39;,&amp;#39;b&amp;#39;,2.0]#创建一个包含不同元素的列表alist[2]#访问第三个元素[1,2] + [3,4]#支持加法运算，等于[1,2,3,4][1] * 3#支持乘法运算，等于[1,1,1]python中有多种对列表的操作函数，如下：
+list.append(x)#在列表尾部追加成员xlist.count(x)#返回参数x出现的次数list.extend(L)#向列表中追加另一个列表Llist.index(x)#返回参数x在列表中的序号list.insert(index,object)#向列表中指定位置插入数据list.pop()#删除尾部成员并返回被删除的成员list.remove(x)#删除x，多个则只删除第一个list.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  
+  <link rel="next" href="https://hcz.netlify.app/post/2022-03-19-python-learning/" />
+  <link rel="canonical" href="https://hcz.netlify.app/post/2022-03-19-shiny-learning/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Shiny Learning | HCZ-Blog
+       
+  </title>
+  <meta name="title" content="Shiny Learning | HCZ-Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shiny Learning"/>
+<meta name="twitter:description" content="Chapter 1：一个简单的例子library(shiny)ui &lt;- fluidPage(selectInput(&quot;dataset&quot;, label = &quot;Dataset&quot;, choices = ls(&quot;package:datasets&quot;)),verbatimTextOutput(&quot;summary&quot;),tableOutput(&quot;table&quot;))server &lt;- function(input, output, session) {output$summary &lt;- renderPrint({dataset &lt;- get(input$dataset, &quot;package:datasets&quot;)summary(dataset)})output$table &lt;- renderTable({dataset &lt;- get(input$dataset, &quot;package:datasets&quot;)dataset})}shinyApp(ui, server)Shiny app有两部分：用户交互脚本ui、服务器脚本server。
+Notes:
+1、fluidPage() 是一个布局函数，用于设置页面的基本视觉结构。它将展示一个自动调整组件尺寸大小来适应浏览器。
+2、selectInput() 是一个输入控件，它允许用户通过提供一个值来与应用程序进行交互。在这种情况下，它是一个带有“数据集”标签的选择框，可让您选择 R 附带的内置数据集之一。
+3、verbatimTextOutput() 和 tableOutput() 是输出控件，它们告诉 Shiny 将渲染输出放在哪里（我们稍后会介绍如何）。 verbatimTextOutput() 显示代码，tableOutput() 显示表格。
+以上为写一个脚本的简单例子，但一般而言把ui与server分别放在不同的脚本比较好，以下给出建立步骤：
+建立一个shiny app：
+1、为app创建一个文件夹.
+2、app’s server.R and ui.R 脚本放在文件夹之下"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Shiny Learning",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/hcz.netlify.app\/post\/2022-03-19-shiny-learning\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/hcz.netlify.app\/head.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "post",
+  
+  "wordcount":  601 ,
+  "url": "https:\/\/hcz.netlify.app\/post\/2022-03-19-shiny-learning\/",
+  "datePublished": "2022-03-19T00:00:00\u002b00:00",
+  "dateModified": "2022-03-19T00:00:00\u002b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/hcz.netlify.app\/head.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "HCZ"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://hcz.netlify.app">HCZ-Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://hcz.netlify.app">HCZ-Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Shiny Learning</h1>
+        <div class="post-meta">
+            Written by <a href="https://hcz.netlify.app" rel="author">HCZ</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2022-03-19 >19 March 2022</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hcz.netlify.app/categories/r/"> R </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                3 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+
+<div id="chapter-1一个简单的例子" class="section level1">
+<h1>Chapter 1：一个简单的例子</h1>
+<pre class="r"><code>library(shiny)
+ui &lt;- fluidPage(
+  selectInput(&quot;dataset&quot;, label = &quot;Dataset&quot;, choices = ls(&quot;package:datasets&quot;)),
+  verbatimTextOutput(&quot;summary&quot;),
+  tableOutput(&quot;table&quot;)
+)
+server &lt;- function(input, output, session) {
+  output$summary &lt;- renderPrint({
+    dataset &lt;- get(input$dataset, &quot;package:datasets&quot;)
+    summary(dataset)
+  })
+  
+  output$table &lt;- renderTable({
+    dataset &lt;- get(input$dataset, &quot;package:datasets&quot;)
+    dataset
+  })
+}
+shinyApp(ui, server)</code></pre>
+<p>Shiny app有两部分：用户交互脚本ui、服务器脚本server。</p>
+<p><strong>Notes:</strong></p>
+<p>1、fluidPage() 是一个布局函数，用于设置页面的基本视觉结构。它将展示一个自动调整组件尺寸大小来适应浏览器。</p>
+<p>2、selectInput() 是一个输入控件，它允许用户通过提供一个值来与应用程序进行交互。在这种情况下，它是一个带有“数据集”标签的选择框，可让您选择 R 附带的内置数据集之一。</p>
+<p>3、verbatimTextOutput() 和 tableOutput() 是输出控件，它们告诉 Shiny 将渲染输出放在哪里（我们稍后会介绍如何）。 verbatimTextOutput() 显示代码，tableOutput() 显示表格。</p>
+<p>以上为写一个脚本的简单例子，但一般而言把ui与server分别放在不同的脚本比较好，以下给出建立步骤：</p>
+<p><strong>建立一个shiny app：</strong></p>
+<p>1、为app创建一个文件夹.</p>
+<p>2、app’s server.R and ui.R 脚本放在文件夹之下</p>
+<p>3、启动app runApp 或者 RStudio的启动按钮</p>
+<p>4、退出app.</p>
+<div id="example" class="section level2">
+<h2>Example:</h2>
+<p><strong>(1) ui.R</strong></p>
+<pre class="r"><code>library(shiny)
+
+# Define UI for application that draws a histogram
+shinyUI(fluidPage(
+
+  # Application title
+  titlePanel(&quot;Hello Shiny!&quot;),
+
+  # Sidebar with a slider input for the number of bins
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(&quot;bins&quot;,
+                  &quot;Number of bins:&quot;,
+                  min = 1,
+                  max = 50,
+                  value = 30)
+    ),
+
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput(&quot;distPlot&quot;)
+    )
+  )
+))</code></pre>
+<p><strong>(2)server.R</strong></p>
+<pre class="r"><code>library(shiny)
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+
+  # Expression that generates a histogram. The expression is
+  # wrapped in a call to renderPlot to indicate that:
+  #
+  #  1) It is &quot;reactive&quot; and therefore should re-execute automatically
+  #     when inputs change
+  #  2) Its output type is a plot
+
+  output$distPlot &lt;- renderPlot({
+    x    &lt;- faithful[, 2]  # Old Faithful Geyser data
+    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)
+
+    # draw the histogram with the specified number of bins
+    hist(x, breaks = bins, col = &#39;darkgray&#39;, border = &#39;white&#39;)
+  })
+})</code></pre>
+<p>UI常用的一个布局：</p>
+<pre class="r"><code>library(shiny)
+shinyUI(fluidPage(
+  titlePanel(&quot;title&quot;),
+  sidebarLayout(
+    sidebarPanel(&quot;title&quot;),
+    mainPanel(&quot;title&quot;)
+  )
+  )
+)</code></pre>
+<p><strong>Tips:</strong>在带有Panel的函数中可以用Html5语言书写，用以编辑页面的布局。例如：</p>
+<pre class="r"><code># ui.R
+
+shinyUI(fluidPage(
+  titlePanel(&quot;My Shiny App&quot;),
+  sidebarLayout(
+    sidebarPanel(),
+    mainPanel(
+        h6(&quot;Episode IV&quot;, align = &quot;center&quot;),
+        h6(&quot;A NEW HOPE&quot;, align = &quot;center&quot;),
+        h5(&quot;It is a period of civil war.&quot;, align = &quot;center&quot;),
+        h4(&quot;Rebel spaceships, striking&quot;, align = &quot;center&quot;),
+        h3(&quot;from a hidden base, have won&quot;, align = &quot;center&quot;),
+        h2(&quot;their first victory against the&quot;, align = &quot;center&quot;),
+        h1(&quot;evil Galactic Empire.&quot;)
+    )
+  )
+))</code></pre>
+<p>以上是标题的演示，此外还有p()创建段落，strong()加粗，em()斜体，code()代码块，br()下一行等等。</p>
+<p>插入图片可以用img函数，img函数通过特殊处理才能找到图片，图片文件必须在www文件在下，www文件和 ui.R 脚本同路径：</p>
+<pre class="r"><code>img(src = &quot;my_image.png&quot;, height = 72, width = 72)</code></pre>
+<p><img src="r.png" style="width:50.0%" /></p>
+<div id="应用参考" class="section level4">
+<h4>应用参考：</h4>
+<pre class="r"><code>shinyUI(fluidPage(
+  titlePanel(&quot;My Shiny App&quot;),
+  sidebarLayout(
+    sidebarPanel(
+      h2(&quot;Installation&quot;),
+      p(&quot;Shiny is available on CRAN, so you can install it in the usual way from your R console:&quot;),
+      code(&#39;install.packages(&quot;shiny&quot;)&#39;),
+      br(),
+      br(),
+      br(),
+      br(),
+      img(src = &quot;bigorb.png&quot;, height = 72, width = 72),
+      &quot;shiny is a product of &quot;, 
+        span(&quot;RStudio&quot;, style = &quot;color:blue&quot;)
+    ),
+    mainPanel(
+      h1(&quot;Introducing Shiny&quot;),
+      p(&quot;Shiny is a new package from RStudio that makes it &quot;, 
+        em(&quot;incredibly easy&quot;), 
+        &quot; to build interactive web applications with R.&quot;),
+      br(),
+      p(&quot;For an introduction and live examples, visit the &quot;,
+        a(&quot;Shiny homepage.&quot;, 
+          href = &quot;http://www.rstudio.com/shiny&quot;)),
+      br(),
+      h2(&quot;Features&quot;),
+      p(&quot;* Build useful web applications with only a few lines of code—no JavaScript required.&quot;),
+      p(&quot;* Shiny applications are automatically “live”.. in the same way that &quot;, 
+        strong(&quot;spreadsheets&quot;),
+        &quot; are live. Outputs change instantly as users modify inputs, without requiring a reload of the browser.&quot;)
+    )
+  )
+))</code></pre>
+</div>
+</div>
+</div>
+<div id="chapter-2-the-ui" class="section level1">
+<h1>Chapter 2: The UI</h1>
+<p><strong>Input function:</strong>
+1. sliderInput()</p>
+<pre class="r"><code>#条状数字输入
+sliderInput(&quot;min&quot;, &quot;Limit (minimum)&quot;, value = 50, min = 0, max = 100)</code></pre>
+<p>2.selectInput()</p>
+<pre class="r"><code>animals &lt;- c(&quot;dog&quot;, &quot;cat&quot;, &quot;mouse&quot;, &quot;bird&quot;, &quot;other&quot;, &quot;I hate animals&quot;)
+
+ui &lt;- fluidPage(
+  selectInput(&quot;state&quot;, &quot;What&#39;s your favourite state?&quot;, state.name,multiple = TRUE),#可以多选
+  radioButtons(&quot;animal&quot;, &quot;What&#39;s your favourite animal?&quot;, animals)
+)</code></pre>
+<p><img src="limited-choices.png" />
+3.textInput()</p>
+<pre class="r"><code>#写在fluidpage的括号内，第一个为变量名，第二个为标题
+  textInput(&quot;name&quot;, &quot;What&#39;s your name?&quot;),#文本输入
+  passwordInput(&quot;password&quot;, &quot;What&#39;s your password?&quot;),#密码类文本输入
+  textAreaInput(&quot;story&quot;, &quot;Tell me about yourself&quot;, rows = 3)#自由输入</code></pre>
+<p>4.numericInput()</p>
+<pre class="r"><code>#数字输入或区间输入
+  numericInput(&quot;num&quot;, &quot;Number one&quot;, value = 0, min = 0, max = 100),
+  sliderInput(&quot;num2&quot;, &quot;Number two&quot;, value = 50, min = 0, max = 100),
+  sliderInput(&quot;rng&quot;, &quot;Range&quot;, value = c(10, 20), min = 0, max = 100)</code></pre>
+<p>5.dateInput()</p>
+<pre class="r"><code>#日期输入
+  dateInput(&quot;dob&quot;, &quot;When were you born?&quot;),
+  dateRangeInput(&quot;holiday&quot;, &quot;When do you want to go on vacation next?&quot;)</code></pre>
+<p>6.checkboxGroupInput/checkboxInput</p>
+<pre class="r"><code>#多选
+checkboxGroupInput(&quot;animal&quot;, &quot;What animals do you like?&quot;, animals)
+#单选
+checkboxInput(&quot;cleanup&quot;, &quot;Clean up?&quot;, value = TRUE),#表示已选上
+checkboxInput(&quot;shutdown&quot;, &quot;Shutdown?&quot;)</code></pre>
+<p>7.fileInput</p>
+<pre class="r"><code>#这是UI端的代码，该函数需要server端的特殊处理
+fileInput(&quot;upload&quot;, NULL)</code></pre>
+<p>8.actionButton</p>
+</div>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>HCZ </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>601</span>
+            </p>
+
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-shiny-learning%2f&amp;text=Shiny%20Learning&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-shiny-learning%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-shiny-learning%2f&amp;title=Shiny%20Learning" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://hcz.netlify.app">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://hcz.netlify.app/post/2022-03-19-python-learning/" class="next" rel="next" title="Python Learning">Python Learning&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'yourdiscussshortname';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2021 - 2022</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hcz.netlify.app">HCZ</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.10.0/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

@@ -72,6 +72,62 @@
     </url>
   
     <url>
+      <loc>https://hcz.netlify.app/categories/python/</loc>
+      
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://hcz.netlify.app/post/2022-03-19-python-learning/</loc>
+      
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://hcz.netlify.app/categories/r/</loc>
+      
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://hcz.netlify.app/post/2022-03-19-shiny-learning/</loc>
+      
+      <lastmod>2022-03-19T00:00:00+00:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://hcz.netlify.app/about/</loc>
       
       <lastmod>2014-04-09T00:00:00+00:00</lastmod>

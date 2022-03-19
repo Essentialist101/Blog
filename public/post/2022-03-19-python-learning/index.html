@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://hcz.netlify.app/post/2022-03-19-shiny-learning/" />
+  <link rel="next" href="https://hcz.netlify.app/post/2022-03-19-git-learning/" />
+  <link rel="canonical" href="https://hcz.netlify.app/post/2022-03-19-python-learning/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Python Learning | HCZ-Blog
+       
+  </title>
+  <meta name="title" content="Python Learning | HCZ-Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Learning"/>
+<meta name="twitter:description" content="一、初识python1.1 python的开发环境python是一门语言，常用IDE（集成开发环境）有pycharm和spyder，网页交互式编译器jupyter。还有一个是anaconda，属于python系列软件的打包软件。
+1.2 python的特征python 最具特色的就是用缩进来写模块。缩进的空白数量是可变的，但是所有代码块语句必须包含相同的缩进空白数量，这个必须严格执行。比如：
+if True:print (&quot;Answer&quot;)print (&quot;True&quot;)else:print (&quot;Answer&quot;)# 没有严格缩进，在执行时会报错print (&quot;False&quot;)Python的小优点（print函数）互换两个数的值可以用以下优雅的代码实现：
+x=3y=5x,y=y,x#print输出一个路径可以使用原始字符串或者转义字符print(&quot;D:\\mydata\\notebook.txt&quot;)print(r&quot;D:\mydata\notebook.txt&quot;)#长字符串（也可以用3个单引号，但要前后对应）poetry = &quot;&quot;&quot;面朝大海春暖花开这是一首优美的诗歌&quot;&quot;&quot;print(poetry)转义字符
+1.3 python变量类型标准数据类型有：Numbers——数字（整型int与长整型long、浮点型float、复数complex）、String——字符串、List——列表、Tuple——元组、Dictionary——字典
+python特有的结构主要是三种：列表、元组与字典。
+1.3.1 list列表列表是最常见的一种数据形式，可以把大量地数据放到一起。它是以方括号“[ ]”包围的数据集合，不同成员之间用半角逗号相隔开。列表可以包含任何数据类型，也可以包含一个列表。列表也可以通过序号访问其中的成员。
+alist = [&#39;a&#39;,&#39;1&#39;,&#39;b&#39;,2.0]#创建一个包含不同元素的列表alist[2]#访问第三个元素[1,2] &#43; [3,4]#支持加法运算，等于[1,2,3,4][1] * 3#支持乘法运算，等于[1,1,1]python中有多种对列表的操作函数，如下：
+list.append(x)#在列表尾部追加成员xlist.count(x)#返回参数x出现的次数list.extend(L)#向列表中追加另一个列表Llist.index(x)#返回参数x在列表中的序号list.insert(index,object)#向列表中指定位置插入数据list.pop()#删除尾部成员并返回被删除的成员list.remove(x)#删除x，多个则只删除第一个list."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python Learning",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/hcz.netlify.app\/post\/2022-03-19-python-learning\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/hcz.netlify.app\/head.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "post",
+  
+  "wordcount":  150 ,
+  "url": "https:\/\/hcz.netlify.app\/post\/2022-03-19-python-learning\/",
+  "datePublished": "2022-03-19T00:00:00\u002b00:00",
+  "dateModified": "2022-03-19T00:00:00\u002b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/hcz.netlify.app\/head.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "HCZ"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://hcz.netlify.app">HCZ-Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://hcz.netlify.app">HCZ-Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Python Learning</h1>
+        <div class="post-meta">
+            Written by <a href="https://hcz.netlify.app" rel="author">HCZ</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2022-03-19 >19 March 2022</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hcz.netlify.app/categories/python/"> Python </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                1 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+
+<div id="一初识python" class="section level1">
+<h1>一、初识python</h1>
+<div id="python的开发环境" class="section level2">
+<h2>1.1 python的开发环境</h2>
+<p>python是一门语言，常用IDE（集成开发环境）有pycharm和spyder，网页交互式编译器jupyter。还有一个是anaconda，属于python系列软件的打包软件。</p>
+</div>
+<div id="python的特征" class="section level2">
+<h2>1.2 python的特征</h2>
+<p>python 最具特色的就是用缩进来写模块。缩进的空白数量是可变的，但是所有代码块语句必须包含相同的缩进空白数量，这个必须严格执行。比如：</p>
+<pre class="r"><code>if True:
+    print (&quot;Answer&quot;)
+    print (&quot;True&quot;)
+else:
+    print (&quot;Answer&quot;)
+    # 没有严格缩进，在执行时会报错
+    print (&quot;False&quot;)</code></pre>
+<div id="python的小优点print函数" class="section level3">
+<h3>Python的小优点（print函数）</h3>
+<p>互换两个数的值可以用以下优雅的代码实现：</p>
+<pre class="r"><code>x=3
+y=5
+x,y=y,x
+#print输出一个路径可以使用原始字符串或者转义字符
+print(&quot;D:\\mydata\\notebook.txt&quot;)
+print(r&quot;D:\mydata\notebook.txt&quot;)
+#长字符串（也可以用3个单引号，但要前后对应）
+poetry = &quot;&quot;&quot;
+面朝大海
+春暖花开
+
+这是一首优美的诗歌
+&quot;&quot;&quot;
+print(poetry)</code></pre>
+<div class="figure">
+<img src="./trans.png" alt="" />
+<p class="caption">转义字符</p>
+</div>
+</div>
+</div>
+<div id="python变量类型" class="section level2">
+<h2>1.3 python变量类型</h2>
+<p>标准数据类型有：Numbers——数字（整型int与长整型long、浮点型float、复数complex）、String——字符串、List——列表、Tuple——元组、Dictionary——字典</p>
+<p>python特有的结构主要是三种：列表、元组与字典。</p>
+<div id="list列表" class="section level3">
+<h3>1.3.1 list列表</h3>
+<p>列表是最常见的一种数据形式，可以把大量地数据放到一起。它是以方括号“[ ]”包围的数据集合，不同成员之间用半角逗号相隔开。列表可以包含任何数据类型，也可以包含一个列表。列表也可以通过序号访问其中的成员。</p>
+<pre class="r"><code>alist = [&#39;a&#39;,&#39;1&#39;,&#39;b&#39;,2.0]#创建一个包含不同元素的列表
+alist[2]#访问第三个元素
+[1,2] + [3,4]#支持加法运算，等于[1,2,3,4]
+[1] * 3#支持乘法运算，等于[1,1,1]</code></pre>
+<p>python中有多种对列表的操作函数，如下：</p>
+<pre class="r"><code>list.append(x)#在列表尾部追加成员x
+list.count(x)#返回参数x出现的次数
+list.extend(L)#向列表中追加另一个列表L
+list.index(x)#返回参数x在列表中的序号
+list.insert(index,object)#向列表中指定位置插入数据
+list.pop()#删除尾部成员并返回被删除的成员
+list.remove(x)#删除x，多个则只删除第一个
+list.reverse()#顺序颠倒
+list.sort()#对成员排序，要求可排序</code></pre>
+</div>
+<div id="tuple元组" class="section level3">
+<h3>1.3.2 tuple元组</h3>
+<p>元组可以看成是特殊的列表，一经建立就不能改变。</p>
+<pre class="r"><code>atuple = (1,2,3)#创建一个元组
+atuple[1]#引用第二个元素</code></pre>
+</div>
+<div id="dictionary字典" class="section level3">
+<h3>1.3.3 dictionary字典</h3>
+<p>字典是一堆无序的成员的集合，每个成员以“键——key：值——value”的形式存在。通过键来访问成员，而不能通过位置来访问。</p>
+<pre class="r"><code>adct = {&#39;a&#39;:1,&#39;b&#39;:2,&#39;c&#39;:3.4}#创建一个字典
+adct[&#39;a&#39;]#用键名来引用成员
+#python中对字典有很多操作函数
+dic.clear()#清空字典
+dic.copy()#复制字典
+dic.get(k,default=“defau”)#获取k对应的值，不存在则返回defau
+dic.items()#获得由键和值组成的迭代器
+dic.keys()#获得键的迭代器
+dic.pop(k)#删除k:v成员对
+dic.update(adict)#从另一个字典更新成员（存在则覆盖，不存在则增添）
+dic.values()#获得值的迭代器
+dic.fromkeys(iter,value)#以列表或元组中给定的键建立字典，默认值为value
+dic.popitem()#从字典中删除任一k:v并返回它
+dic.setdefault(k,default)#若字典中存在key值为k的，则返回其对应的值，
+#否则在字典中建立一个k:default字典成员</code></pre>
+<p>字典的创建常用for循环与zip()函数，zip()函数用于将多个序列中的元素配对，输出为元素为“对”的元组。</p>
+<p>字典的键不能是列表。</p>
+</div>
+<div id="集合" class="section level3">
+<h3>1.3.4 集合</h3>
+<p>py的变量类型还有集合。集合有以下特征：</p>
+</div>
+</div>
+<div id="流程控制语句" class="section level2">
+<h2>1.4 流程控制语句</h2>
+<div id="if语句" class="section level3">
+<h3>1.4.1 if语句</h3>
+<pre class="r"><code>num = 5     
+if num == 3:            # 判断num的值
+    print &#39;boss&#39;        
+elif num == 2:
+    print &#39;user&#39;
+elif num == 1:
+    print &#39;worker&#39;
+elif num &lt; 0:           # 值小于零时输出
+    print &#39;error&#39;
+else:
+    print &#39;roadman&#39;     # 条件均不成立时输出</code></pre>
+</div>
+<div id="循环" class="section level3">
+<h3>1.4.2 循环</h3>
+<pre class="r"><code>for letter in python:
+  print(&quot;the letter is:&quot; % letter)</code></pre>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>HCZ </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>150</span>
+            </p>
+
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-python-learning%2f&amp;text=Python%20Learning&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-python-learning%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhcz.netlify.app%2fpost%2f2022-03-19-python-learning%2f&amp;title=Python%20Learning" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://hcz.netlify.app">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hcz.netlify.app/post/2022-03-19-shiny-learning/" class="prev" rel="prev" title="Shiny Learning"><i class="iconfont icon-dajiantou"></i>&nbsp;Shiny Learning</a>
+         
+        
+        <a href="https://hcz.netlify.app/post/2022-03-19-git-learning/" class="next" rel="next" title="Git Learning">Git Learning&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'yourdiscussshortname';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2021 - 2022</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hcz.netlify.app">HCZ</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.10.0/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

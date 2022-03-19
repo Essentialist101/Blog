@@ -6,16 +6,22 @@
     <description>Recent content in R on HCZ-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://hcz.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello R Markdown</title>
-      <link>https://hcz.netlify.app/2020/2020-12-01-r-rmarkdown/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <title>Shiny Learning</title>
+      <link>https://hcz.netlify.app/post/2022-03-19-shiny-learning/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://hcz.netlify.app/2020/2020-12-01-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <guid>https://hcz.netlify.app/post/2022-03-19-shiny-learning/</guid>
+      <description>Chapter 1：一个简单的例子library(shiny)ui &amp;lt;- fluidPage(selectInput(&amp;quot;dataset&amp;quot;, label = &amp;quot;Dataset&amp;quot;, choices = ls(&amp;quot;package:datasets&amp;quot;)),verbatimTextOutput(&amp;quot;summary&amp;quot;),tableOutput(&amp;quot;table&amp;quot;))server &amp;lt;- function(input, output, session) {output$summary &amp;lt;- renderPrint({dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;)summary(dataset)})output$table &amp;lt;- renderTable({dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;)dataset})}shinyApp(ui, server)Shiny app有两部分：用户交互脚本ui、服务器脚本server。
+Notes:
+1、fluidPage() 是一个布局函数，用于设置页面的基本视觉结构。它将展示一个自动调整组件尺寸大小来适应浏览器。
+2、selectInput() 是一个输入控件，它允许用户通过提供一个值来与应用程序进行交互。在这种情况下，它是一个带有“数据集”标签的选择框，可让您选择 R 附带的内置数据集之一。
+3、verbatimTextOutput() 和 tableOutput() 是输出控件，它们告诉 Shiny 将渲染输出放在哪里（我们稍后会介绍如何）。 verbatimTextOutput() 显示代码，tableOutput() 显示表格。
+以上为写一个脚本的简单例子，但一般而言把ui与server分别放在不同的脚本比较好，以下给出建立步骤：
+建立一个shiny app：
+1、为app创建一个文件夹.
+2、app’s server.R and ui.R 脚本放在文件夹之下</description>
     </item>
     
   </channel>
