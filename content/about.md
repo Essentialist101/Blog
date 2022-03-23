@@ -1,23 +1,20 @@
 ---
 aliases:
 - about-us
-- about-hugo
 - contact
 author:
-  name: Hugo Authors
-date: "2014-04-09"
+  name: HCZ
+date: "2022-03-21"
 title: About
 ---
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+This is a blog about R & Python learning.
 
-It makes use of a variety of open source projects including:
+Commonly used R packages:
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+ggplot2(link: https://ggplot2-book.org/index.html)
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+shiny(link: https://shiny.rstudio.com/tutorial/)
+
+blogdown(link: https://bookdown.org/yihui/blogdown/)
 
